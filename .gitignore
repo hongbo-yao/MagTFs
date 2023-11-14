@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+# MagTF files
+MagTF
+*.log
+*.logfile
+*.out
+*.eps
+#*.png
+*.pdf
+*.dat
+*.vtk
+#contrib
+tests
+releases
+doc
+manual
