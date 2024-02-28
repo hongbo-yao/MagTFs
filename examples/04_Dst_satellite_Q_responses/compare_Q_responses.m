@@ -8,11 +8,11 @@ TF_file = 'satellite.TF';
 dataQ = [period_id, output_channel_id, input_channel_id, period, TF_re, TF_im, TF_std_err, coh2, coh2_mult];
 
 % KV2021
-filename2 = 'Kuvshinov_2021_EPS_global_Q_responses.dat';
+filename2 = 'Kuvshinov_2021_EPS_global_Q_responses.txt';
 datakv=load(filename2);
 
 % compare
-fig = figure('Position',[400 200 600 500]);
+fig = figure('Position',[400 200 600 600]);
 subplot(2,1,1);set(gca,'position',[0.13 0.8 0.83 0.15]);
 scatter(dataQ(:,4)/86400,dataQ(:,8),'ro','LineWidth',1.5);
 hold on
@@ -39,11 +39,17 @@ KV_C_Im=-datakv(:,3);
 errorbar(KV_period_in_day,KV_C_Im,KV_C_error,'bd','LineWidth',1.5)
 set(gca,'XScale','log')
 xlabel('Period (days)')
-ylabel('Q-response')
+ylabel('Q-responses')
 lgd = legend('MagTFs','Kuvshinov et al (2021)','NumColumns',2);
 % set(lgd,'box','off','location','best')
+text(1.4,0.35,'real', 'FontSize', 15)
+text(1.4,0.1,'imag', 'FontSize', 15)
 set(gca, 'FontSize', 15, 'LineWidth', 1.0);
 xlim([1 160]);
 ylim([0 0.5]);
 filename = strcat('Q_responses');
+
+set(fig,'Units','Inches');
+pos = get(fig,'Position');
+set(fig,'PaperPositionMode','Auto','PaperUnits','Inches','PaperSize',[pos(3), pos(4)])
 print(filename, '-dpdf', '-r300');
