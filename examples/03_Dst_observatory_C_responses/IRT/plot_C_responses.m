@@ -32,7 +32,7 @@ hold on
 semilogx(period_in_day,Alexey_2011_PHD_cho2,'bd','LineWidth',1.5)
 ylabel('cho2')
 ylim([0 1])
-xlim([2.5 115]);title('FRD');
+xlim([2.5 115]);title(station_name);
 set(gca,'position',[0.14 0.8 0.84 0.15]);set(gca, 'FontSize', 15, 'LineWidth', 1.5);
 
 subplot 212

@@ -1,0 +1,2 @@
+# gg_longitude, gg_colatitude
+141.350	39.230
