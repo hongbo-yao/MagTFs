@@ -1,9 +1,10 @@
 // Geomagnetic transfer function estimation parameters
 
-// Copyright (c) 2023 Hongbo Yao
-// Email: hongbo.yao@outlook.com
+// Copyright (c) 2023-2024 
+// Code by Hongbo Yao (hongbo.yao@outlook.com) and Zhengyong Ren 
+// (renzhengyong@csu.edu.cn), with contributions by Zijun Zuo 
+// (zzjdqqh@163.com) and Chaojian Chen (chaojian.chen@lmu.de)
 // https://github.com/hongbo-yao
-// https://www.researchgate.net/profile/Hongbo_Yao2 
 
 #ifndef _PARAM_H
 #define _PARAM_H

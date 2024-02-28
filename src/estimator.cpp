@@ -2,10 +2,11 @@
 // approach and Iterative Reweighted Least Squares (IRLS) with Huber weight.
 // Data uncertainty is estimated using the jackknife method.
 
-// Copyright (c) 2023 Hongbo Yao
-// Email: hongbo.yao@outlook.com
+// Copyright (c) 2023-2024 
+// Code by Hongbo Yao (hongbo.yao@outlook.com) and Zhengyong Ren 
+// (renzhengyong@csu.edu.cn), with contributions by Zijun Zuo 
+// (zzjdqqh@163.com) and Chaojian Chen (chaojian.chen@lmu.de)
 // https://github.com/hongbo-yao
-// https://www.researchgate.net/profile/Hongbo_Yao2 
 
 // References: 
 // Estimating TFs using section-averaging approach:
@@ -23,10 +24,6 @@
 // response function estimation. Journal of Geophysical Research, 94(B10). 
 // https://doi.org/10.1029/jb094ib10p14215
 // see also Püthe, C. (2015).
-
-// IRLS and compute inverse t distribution value:
-// [4] Parameter Estimation and Inverse Problems, 3rd edition, 2018 
-// by R. Aster, B. Borchers, C. Thurber
 
 #include "estimator.h"
 #include <iostream>
