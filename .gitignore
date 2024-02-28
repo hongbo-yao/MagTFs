@@ -31,14 +31,14 @@
 *.out
 *.app
 
-# MagTF files
-MagTF
+# MagTFs files
+MagTFs
 *.log
 *.logfile
 *.out
 *.eps
 #*.png
-*.pdf
+#*.pdf
 *.dat
 *.vtk
 #contrib
