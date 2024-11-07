@@ -45,9 +45,11 @@ To show the results, run plot_*.m
 
 ### 3. Citation
 
-MagTFs was described in the following manuscript:
+The background theory of MagTFs is described in the following manuscript:
 
 > Zhengyong Ren, Zijun Zuo, Hongbo Yao*, Chaojian Chen*, Linan Xu, Jingtian Tang, Keke Zhang. MagTFs: A tool for estimating multiple magnetic transfer functions to constrain Earth's electrical conductivity structure. Computers & Geosciences, 2024, accepted.
 
+If this helps you, a citation to our paper is appreciated.
+
 ### 5. Authors
-Code by Hongbo Yao (hongbo.yao@outlook.com), with contributions from Zhengyong Ren (renzhengyong@csu.edu.cn), Zijun Zuo (zzjdqqh@163.com) and Chaojian Chen (chaojian.chen@lmu.de)
+Code by Hongbo Yao (hongbo.yao@outlook.com), with contributions from Zhengyong Ren (renzhengyong@csu.edu.cn), Zijun Zuo (zzjdqqh@163.com) and Chaojian Chen (chenchaojian@csu.edu.cn)
