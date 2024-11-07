@@ -98,7 +98,7 @@ void Estimator::estimate_TF_from_time_series()
       for (int i=0; i<param->n_real_input_channel_pieces; i++)
       {
          L_list[i] = param->Nt_list[i]*param->sample_interval;
-         N_segments_max_list[i] = std::floor((L_list[i]-2*KT)/((1-param->overlap)*KT))+3;
+         N_segments_max_list[i] = std::floor((L_list[i]-2*KT)/((1-param->overlap)*KT))+2;
          N_segments_max += N_segments_max_list[i];
          N_segments_max_list_idx[i+1] = N_segments_max;
       }

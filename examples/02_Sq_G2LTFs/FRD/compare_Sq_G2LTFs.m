@@ -5,14 +5,19 @@ station_name='FRD';
 filename1= [station_name '_Sq_G2LTFs.txt'];
 fid1=fopen(filename1);
 dataSq=textscan(fid1,' %f %f %f %f %f %f');
-% MagTFs_BMT_Sq
 coh2=load([station_name '_Sq_coh2.txt']);
-Guzavina_Sq_G2LTFs=load(['Guzavina_' station_name '_Sq_G2LTF_data.txt']);
 
-%BMT_Sq
+% Guzavina
+Guzavina_Sq_G2LTFs=load(['Guzavina_' station_name '_Sq_G2LTF_data.txt']);
 Guzavina_Sq_G2LTFs_Re=Guzavina_Sq_G2LTFs(:,2);
 Guzavina_Sq_G2LTFs_Im=Guzavina_Sq_G2LTFs(:,3);
 Guzavina_Sq_G2LTFs_error=Guzavina_Sq_G2LTFs(:,4);
+
+% Guzavina tide correction
+Guzavina_Sq_G2LTFs_tide_correction=load(['Guzavina_' station_name '_Sq_G2LTF_data_tide_correction.txt']);
+Guzavina_Sq_G2LTFs_tide_correction_Re=Guzavina_Sq_G2LTFs_tide_correction(:,2);
+Guzavina_Sq_G2LTFs_tide_correction_Im=Guzavina_Sq_G2LTFs_tide_correction(:,3);
+Guzavina_Sq_G2LTFs_tide_correction_error=Guzavina_Sq_G2LTFs_tide_correction(:,4);
 
 % compare
 fig = figure('Position',[400 200 600 500]);
@@ -31,9 +36,11 @@ errorbar(Sq_estimation_period_in_hour,Sq_estimation_Sq_Re,Sq_estimation_Sq_error
 hold on
 Guzavina_period_in_hour=Sq_estimation_period_in_hour;
 errorbar(Guzavina_period_in_hour,Guzavina_Sq_G2LTFs_Re,Guzavina_Sq_G2LTFs_error,'bd','LineWidth',1.5)
+hold on
+errorbar(Guzavina_period_in_hour,Guzavina_Sq_G2LTFs_tide_correction_Re,Guzavina_Sq_G2LTFs_tide_correction_error,'g*','LineWidth',1.5)
 set(gca,'XScale','log')
 ylabel('Real TFs');set(gca,'ylim',[-2,2]);
-lgd = legend('MagTFs','Guzavina et al (2019)','NumColumns',2);
+lgd = legend('MagTFs','Guzavina et al (2019)','Guzavina et al (2019), tide correction','NumColumns',1);
 set(lgd,'location','best');set(gca, 'FontSize', 15, 'LineWidth', 1.0);
 set(gca,'Xtick',[6 8 12 24]);set(gca,'xlim',[5.5,25]);
 
@@ -43,6 +50,8 @@ Sq_estimation_Sq_Im=dataSq{1,5};
 errorbar(Sq_estimation_period_in_hour,Sq_estimation_Sq_Im,Sq_estimation_Sq_error,'ro','LineWidth',1.5)
 hold on
 errorbar(Guzavina_period_in_hour,Guzavina_Sq_G2LTFs_Im,Guzavina_Sq_G2LTFs_error,'bd','LineWidth',1.5)
+hold on
+errorbar(Guzavina_period_in_hour,Guzavina_Sq_G2LTFs_tide_correction_Im,Guzavina_Sq_G2LTFs_tide_correction_error,'g*','LineWidth',1.5)
 set(gca,'XScale','log');set(gca, 'FontSize', 15, 'LineWidth', 1.0);
 set(gca,'Xtick',[6 8 12 24]);set(gca,'xlim',[5.5,25]);
 xlabel('Period (hours)')
