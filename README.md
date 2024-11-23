@@ -47,7 +47,7 @@ To show the results, run plot_*.m
 
 The background theory of MagTFs is described in the following manuscript:
 
-> Zhengyong Ren, Zijun Zuo, Hongbo Yao*, Chaojian Chen*, Linan Xu, Jingtian Tang, Keke Zhang. MagTFs: A tool for estimating multiple magnetic transfer functions to constrain Earth's electrical conductivity structure. Computers & Geosciences, 2024, accepted.
+> (12)	Zhengyong Ren, Zijun Zuo, Hongbo Yao*, Chaojian Chen*, Linan Xu, Jingtian Tang, Keke Zhang. MagTFs: A tool for estimating multiple magnetic transfer functions to constrain Earth’s electrical conductivity structure. Computers & Geosciences, 2025, 195, 105769. https://doi.org/10.1016/j.cageo.2024.105769
 
 If this helps you, a citation to our paper is appreciated.
 
